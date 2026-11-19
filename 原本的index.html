@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台灣匿名平台｜說得出口的話，不必署名</title>
+<meta name="description" content="台灣匿名平台：讓每個人在不公開身分的情況下，寫下想說的話，也能為自己的學校或社群建立匿名投稿網站。">
+<link rel="stylesheet" href="/antw/os/ui/index.css">
+</head>
+<body>
+
+<div id="page" class="page">
+  <main class="card">
+    <div class="card-head">
+      <div class="badge">ANTW</div>
+      <h1>台灣匿名平台</h1>
+      <p>說得出口的話，不必署名 | 匿名投稿・建立網站</p>
+    </div>
+
+    <div class="stat">不用註冊、不用填姓名，打開網頁就能寫</div>
+
+    <div class="card-body">
+      <section class="block">
+        <h2>匿名投稿示意</h2>
+        <ol class="feed" aria-label="匿名投稿示意">
+          <li class="msg" style="--i:0"><span class="who">陳同學</span><p>段考終於考完了，今天可以睡到飽。</p></li>
+          <li class="msg" style="--i:1"><span class="who">林學姊</span><p>謝謝那天在走廊幫我撿東西的人。</p></li>
+          <li class="msg" style="--i:2"><span class="who">王小明</span><p>其實我一直很想加入社團，只是不敢說。</p></li>
+        </ol>
+      </section>
+
+      <section class="block">
+        <h2>這是什麼平台</h2>
+        <p>台灣匿名平台是一個匿名投稿的地方。投稿會先交給管理員審核，通過後才會公開發布，公開頁面不會顯示投稿人的任何身分資訊。</p>
+      </section>
+
+      <section class="block">
+        <h2>怎麼運作</h2>
+        <ol class="steps">
+          <li><b>寫下內容</b>打開投稿頁，輸入想說的話，不需要登入。</li>
+          <li><b>管理員審核</b>確認內容沒有違規或侵害他人。</li>
+          <li><b>公開發布</b>通過的內容會公開顯示，不帶有你的名字。</li>
+        </ol>
+      </section>
+
+      <section class="block">
+        <h2>為你的社群建立網站</h2>
+        <p>想讓班級、社團或學校也有自己的匿名投稿網站？按下「建立網站」就能開始設定。</p>
+      </section>
+
+      <section class="block warn">
+        <h2>匿名的界線</h2>
+        <ul class="rules">
+          <li>公開頁面不會出現你的 IP 位址或任何可辨識身分的資訊。</li>
+          <li>為了防止洗版與惡意攻擊，伺服器會記錄連線資訊，只有管理員在處理違規時能查閱。</li>
+          <li>公然侮辱、誹謗、恐嚇等違法內容，平台會依法配合調查。</li>
+        </ul>
+      </section>
+
+      <div class="note">
+        <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+        <p>請尊重他人，勿發表公然侮辱、誹謗或違法之內容。</p>
+      </div>
+
+      <button type="button" class="btn" id="create-site">
+        <span>建立網站</span>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+      </button>
+      <button type="button" class="btn ghost" data-open-privacy>隱私權政策</button>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <button type="button" data-open-privacy>隱私權政策與關於本站</button>
+  </footer>
+</div>
+
+<!-- 隱私權政策：由 privacy.json 渲染，不另開頁面 -->
+<div id="privacy" class="overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+    <div class="modal-head">
+      <div class="modal-ico">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+      </div>
+      <div>
+        <h2 id="privacy-title">隱私權政策</h2>
+        <p id="privacy-updated">請詳閱</p>
+      </div>
+    </div>
+    <div class="modal-body" id="privacy-body" aria-live="polite">載入中…</div>
+    <div class="modal-foot">
+      <button type="button" class="btn" id="privacy-close">我已閱讀，返回</button>
+    </div>
+  </div>
+</div>
+
+<script src="/antw/os/ui/pass.js"></script>
+<script src="/antw/os/ui/index.js" defer></script>
+</body>
+</html>

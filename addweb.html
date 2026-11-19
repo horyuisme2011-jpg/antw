@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>建立網站｜台灣匿名平台</title>
+<link rel="stylesheet" href="/antw/os/ui/index.css">
+</head>
+<body>
+<div class="page">
+  <main class="card">
+    <div class="card-head">
+      <div class="badge">ANTW</div>
+      <h1>建立網站</h1>
+      <p>台灣匿名平台</p>
+    </div>
+
+    <!-- 通行碼有效：顯示建立網站內容 -->
+    <div id="ok" class="card-body" hidden>
+      <section class="block">
+        <h2>建立網站</h2>
+        <p>這裡之後放建立網站的表單與設定內容。</p>
+      </section>
+      <p class="passline">本次通行碼：<code id="pass-show"></code></p>
+      <a class="btn ghost" href="/">回首頁</a>
+    </div>
+
+    <!-- 通行碼無效、過期或網址被複製到新分頁 -->
+    <div id="expired" class="card-body" hidden>
+      <div class="note amber">
+        <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+        <p><b>此網頁已過期</b><br>請重新載入。</p>
+      </div>
+      <a class="btn" href="/">回首頁重新開始</a>
+    </div>
+  </main>
+</div>
+<script src="/antw/os/ui/pass.js"></script>
+<script src="/antw/os/ui/addweb.js"></script>
+</body>
+</html>
